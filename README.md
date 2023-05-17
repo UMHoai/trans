@@ -1,1 +1,8 @@
-Dimensional reduction (giảm chiều dữ liệu) is the process of reducing the dimensionality of data while still attempting to retain the most important information. When working with high-dimensional data, dimensionality reduction can help reduce computational complexity, increase processing speed, and mitigate data proliferation.
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(sentences)
+
+# Lấy danh sách các từ làm features
+features = vectorizer.get_feature_names()
+
+# In danh sách các từ
+print("Danh sách các từ trong features:")
