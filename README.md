@@ -1,15 +1,17 @@
-# Đoạn code để phân cụm và gán nhãn
-kmeans2 = KMeans(n_clusters=5, random_state=13)
-kmeans2.fit_predict(review_umapped)
-kmeans2.fit(review_vectors)
-cluster_labels = kmeans2.labels_
+# CountVectorizer is used to convert text documents into numerical vectors
+# Stop words have already been removed before this step
 
-# Tạo DataFrame mới chứa dữ liệu đã phân cụm và gán nhãn
-clustered_data = pd.DataFrame({
-    'review': X_train,
-    'sentiment': y_train,
-    'cluster_label': cluster_labels
-})
+# Initialize the CountVectorizer with specified parameters
+vectorizer = CountVectorizer(lowercase=True, stop_words=stop_words, max_features=max_features)
 
-# Lưu DataFrame vào file CSV
-clustered_data.to_csv('clustered_data.csv', index=False)
+# Fit the vectorizer to the training data
+vectorizer.fit(X_train)
+
+# Transform the training data into vectors
+review_vectors = vectorizer.transform(X_train)
+
+# Convert the sparse matrix to a dense array
+review_train = review_vectors.toarray()
+
+# Print the length of the vocabulary (number of unique words)
+print(len(vectorizer.vocabulary_))
