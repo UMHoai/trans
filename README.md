@@ -1,17 +1,9 @@
-# CountVectorizer is used to convert text documents into numerical vectors
-# Stop words have already been removed before this step
+https://stackabuse.com/python-for-nlp-multi-label-text-classification-with-keras/
 
-# Initialize the CountVectorizer with specified parameters
-vectorizer = CountVectorizer(lowercase=True, stop_words=stop_words, max_features=max_features)
+https://medium.com/analytics-vidhya/an-introduction-to-multi-label-text-classification-b1bcb7c7364c
 
-# Fit the vectorizer to the training data
-vectorizer.fit(X_train)
+https://www.section.io/engineering-education/multi-label-classification-with-scikit-multilearn/
 
-# Transform the training data into vectors
-review_vectors = vectorizer.transform(X_train)
+https://towardsdatascience.com/journey-to-the-center-of-multi-label-classification-384c40229bff
 
-# Convert the sparse matrix to a dense array
-review_train = review_vectors.toarray()
-
-# Print the length of the vocabulary (number of unique words)
-print(len(vectorizer.vocabulary_))
+https://viblo.asia/p/multi-label-classification-cho-bai-toan-tag-predictions-oOVlY2Lr58W
