@@ -9,14 +9,5 @@ https://towardsdatascience.com/journey-to-the-center-of-multi-label-classificati
 https://viblo.asia/p/multi-label-classification-cho-bai-toan-tag-predictions-oOVlY2Lr58W
 
 
-def predict(text):
-    preprocessed_text = preprocess_text(text)
-    sequence = tokenizer.texts_to_sequences([preprocessed_text])
-    padded_sequence = pad_sequences(sequence, padding='post', maxlen=maxlen)
-    prediction = model.predict(padded_sequence)
-    return prediction
+Multi-label classification is a classification task in which a data sample can belong to many different classes (labels) concurrently.
 
-# Example usage
-text = "This is a toxic comment."
-prediction = predict(text)
-print(prediction)
