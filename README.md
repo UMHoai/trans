@@ -8,6 +8,7 @@ https://towardsdatascience.com/journey-to-the-center-of-multi-label-classificati
 
 https://viblo.asia/p/multi-label-classification-cho-bai-toan-tag-predictions-oOVlY2Lr58W
 
+https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/
 
 Multi-label classification is a classification task in which a data sample can belong to many different classes (labels) concurrently.
 
